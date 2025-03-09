@@ -1,0 +1,790 @@
+/* globl style */
+* {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 85%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --minecolor: #ff305b;
+}
+
+@media screen and (max-width:576px) {
+    .container {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .home .overlay .container nav .links ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 30px;
+    }
+
+    .home .overlay .container nav .links ul li {
+        padding: 10px 10px;
+        width: 23%;
+    }
+
+    .home .overlay .container nav .links ul li a {
+        color: rgb(255, 255, 255);
+        font-size: small;
+    }
+
+    
+}
+
+/* body style  */
+
+.home .overlay .container nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.home .overlay .container nav .logo {
+    color: var(--minecolor);
+    font-size: 30px;
+}
+
+.home .overlay .container nav .links ul {
+    display: flex;
+}
+
+.home .overlay .container nav .links ul li {
+    padding: 10px 10px;
+}
+
+.home .overlay .container nav .links ul li a {
+    color: rgb(255, 255, 255);
+}
+
+.home .overlay .container nav .links ul li a:hover,
+.home .overlay .container nav .links ul li a.active {
+    color: var(--minecolor);
+}
+
+.home .overlay .container nav .links ul li span {
+    color: var(--minecolor);
+}
+
+.home {
+    position: relative;
+    background-image: url(../img/WhatsApp\ Image\ 2024-12-01\ at\ 22.06.35_04b2ad1c.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.home .overlay {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.home .overlay .container .Hello {
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 17%;
+    font-size: x-large;
+    color: white;
+}
+
+.home .overlay .container .Hello h1 {
+    font-size: 70px;
+    color: var(--minecolor);
+}
+
+.home .overlay .container .Hello p::after {
+    content: "";
+    border-right: white solid 2px;
+    margin-left: 6px;
+    transition: ease;
+    animation-name: hidden;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hidden {
+    0% {
+        margin-right: 0;
+    }
+
+    50% {
+        content: "";
+        margin-right: 80px;
+        overflow: hidden;
+    }
+
+    100% {
+        margin-right: 0;
+    }
+}
+
+.about .container {
+    display: flex;
+    padding: 70px 0 100px;
+}
+
+.about .container .img {
+    padding-left: 110px;
+    width: 50%;
+    position: relative;
+}
+
+.about .container .img .border {
+    width: 350px;
+    height: 350px;
+    border: rgb(85, 85, 85) solid 7px;
+    border-radius: 7px;
+    position: absolute;
+    z-index: -1;
+}
+
+.about .container .img .rgb {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/work-7.jpg);
+    border-radius: 7px;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: absolute;
+}
+
+.about .container .img .rgb .rgba {
+    width: 350PX;
+    height: 350PX;
+    margin-top: 190px;
+    border-radius: 7px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+.about .container .img .rgb .rgba:hover {
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    content: "";
+    transition: 0.5s;
+    width: 350PX;
+    height: 350PX;
+    margin-top: 0;
+    border-radius: 7px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+.about .container .img .rgb .rgba .IMG {
+    margin-top: 160px;
+    margin-left: 100px;
+}
+
+.about .container .img .rgb .rgba .IMG i {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 0 8px;
+    z-index: 2;
+}
+
+.about .container .img .rgb .rgba .IMG i:hover {
+    color: var(--minecolor);
+}
+
+.about .container .hello {
+    width: 50%;
+    margin: 10px;
+}
+
+.about .container .hello h1 {
+    border-left: solid 4px var(--minecolor);
+    padding-left: 7px;
+    font-size: 30px;
+}
+
+.about .container .hello p {
+    color: rgb(99, 98, 98);
+}
+
+.about .container .hello .prg {
+    color: rgb(99, 98, 98);
+    padding-top: 25px;
+    line-height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about .container .hello .prg p {
+    width: 50%;
+}
+
+.about .container .hello .prg p span {
+    color: rgb(22, 22, 22);
+}
+
+.about .container .hello .prg p a {
+    color: rgb(99, 98, 98);
+}
+
+.about .container .hello button {
+    background-color: var(--minecolor);
+    width: 145px;
+    height: 45px;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.about .container .hello button:hover {
+    background-color: rgb(255, 30, 0);
+}
+
+.our {
+    background: rgb(241, 241, 241);
+    padding: 50px 0;
+}
+
+.our .container {
+    text-align: center;
+    color: rgb(36, 33, 33);
+}
+
+.our .container h1 {
+    font-size: 36px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.our .container .icons .icon p {
+    color: gray;
+    line-height: 20px;
+}
+
+.our .container h1::after {
+    content: "";
+    background-color: var(--minecolor);
+    bottom: 5px;
+    height: 1px;
+    width: 160px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+.our .container h1::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    bottom: 0px;
+    width: 70px;
+    border-color: var(--minecolor);
+    border-style: solid;
+    border-width: 1px 0px;
+    padding: 4px 0px 5px;
+}
+
+.our .container .icons {
+    display: flex;
+    padding: 30px 0;
+    align-items: baseline;
+}
+
+.our .container .icons .icon {
+    padding: 10px 10px 30px 10px;
+}
+
+.our .container .icons .icon:hover {
+    border-radius: 4px;
+    background-color: white;
+    transition: 0.8s;
+    box-shadow: 2px 2px 7px rgb(0, 0, 0, 0.4), 2px 2px 10px rgb(0, 0, 0, 0.4);
+}
+
+.our .container .icons .icon h2 {
+    padding: 10px 0;
+}
+
+.Portfolio {
+    padding: 30PX 0;
+}
+
+.Portfolio .container {
+    text-align: center;
+    color: rgb(36, 33, 33);
+}
+
+.Portfolio .container h1 {
+    font-size: 36px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.Portfolio .container h1::after {
+    content: "";
+    background-color: var(--minecolor);
+    bottom: 5px;
+    height: 1px;
+    width: 160px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+.Portfolio .container h1::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    bottom: 0px;
+    width: 70px;
+    border-color: var(--minecolor);
+    border-style: solid;
+    border-width: 1px 0px;
+    padding: 4px 0px 5px;
+}
+
+.Portfolio .container .link {
+    padding: 50px 0;
+}
+
+.Portfolio .container .link a {
+    padding: 0 20PX;
+    color: rgb(36, 33, 33);
+}
+
+.Portfolio .container .link a:hover {
+    color: var(--minecolor);
+}
+
+.Portfolio .container .imgs {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: right;
+    padding: 15px 0;
+}
+
+.Portfolio .container .imgs .img .rgba i {
+    margin-top: 240px;
+    margin-right: 20px;
+    font-size: larger;
+}
+
+.Portfolio .container .imgs .img .rgba {
+    color: rgb(255, 255, 255, 0);
+}
+
+.Portfolio .container .imgs .img {
+    width: 31%;
+    height: 280px;
+    margin: 10px 5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.Portfolio .container .imgs .img .rgba:hover {
+    background: rgba(0, 0, 0, 0.4);
+    width: 360px;
+    height: 280px;
+    transition: 0.5s;
+    color: var(--minecolor);
+}
+
+.Portfolio .container .imgs .img1 {
+    background-image: url(../img/1.jpg);
+}
+
+.Portfolio .container .imgs .img2 {
+    background-image: url(../img/2.jpg);
+}
+
+.Portfolio .container .imgs .img3 {
+    background-image: url(../img/3.jpg);
+}
+
+.Portfolio .container .imgs .img4 {
+    background-image: url(../img/4.jpg);
+}
+
+.Portfolio .container .imgs .img5 {
+    background-image: url(../img/5.jpg);
+}
+
+.Portfolio .container .imgs .img6 {
+    background-image: url(../img/6.jpg);
+}
+
+.team {
+    background-color: rgb(241, 241, 241);
+    padding: 45px 0;
+}
+
+.team .container {
+    text-align: center;
+    display: flex;
+}
+
+.team .container .icon {
+    width: 24%;
+    padding: 50px 0;
+    color: rgb(36, 33, 33);
+}
+
+.team .container .icon i {
+    color: var(--minecolor);
+    font-size: 27px;
+    padding-bottom: 20px;
+}
+
+.team .container .icon h1 {
+    padding-bottom: 10px;
+    color: black;
+}
+
+.Client .container {
+    padding: 50px 0;
+    color: rgb(36, 33, 33);
+    text-align: center;
+}
+
+.Client .container h1 {
+    font-size: 36px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.Client .container h1::after {
+    content: "";
+    background-color: var(--minecolor);
+    bottom: 5px;
+    height: 1px;
+    width: 160px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+.Client .container h1::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    bottom: 0px;
+    width: 70px;
+    border-color: var(--minecolor);
+    border-style: solid;
+    border-width: 1px 0px;
+    padding: 4px 0px 5px;
+}
+
+.Client .container .Alex {
+    background-color: rgb(241, 241, 241);
+    margin: 40PX 200PX;
+    padding: 30PX 0;
+    border-radius: 10PX;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    display: flex;
+}
+
+.Client .container .Alex .bink {
+    background-color: var(--minecolor);
+    width: 200px;
+    height: 800px;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: -1;
+    margin-left: 70px;
+    margin: -230px;
+}
+
+.Client .container .Alex img {
+    z-index: 1;
+    margin-right: 400px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 120px;
+    height: 120px;
+}
+
+.Client .container .Alex .ander {
+    text-align: left;
+    margin-left: -370px;
+    margin-bottom: 5px;
+    padding-top: 20px;
+    line-height: 30px;
+}
+
+.Client .container .Alex .ander h3 {
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.Client .container .Alex .ander a {
+    color: gray;
+}
+
+.Client .container .Alex .ander a i {
+    padding-right: 5px;
+}
+
+.Client .container .Alex .ander p {
+    color: rgb(99, 98, 98);
+    padding-bottom: 10px;
+    font-style: italic;
+}
+
+.Client .container .Alex .ander .icons i {
+    color: rgb(241, 195, 13);
+}
+
+.Client .container .points {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: -30px;
+}
+
+.Client .container .points .poi {
+    border: solid 0.5px var(--minecolor);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin-left: 570px;
+}
+
+.Client .container .points .nts {
+    margin-left: 600px;
+    margin-top: -11px;
+    background-color: var(--minecolor);
+    height: 11px;
+    width: 30px;
+    border-radius: 20px;
+}
+
+.blogs {
+    background-color: rgb(241, 241, 241);
+    padding: 50px 0;
+}
+
+.blogs .container {
+    text-align: center;
+}
+
+.blogs .container .our {
+    display: flex;
+    align-items: center;
+    align-items: baseline;
+}
+
+.blogs .container .our .blog {
+    width: 33%;
+    margin: 0 17px;
+    padding-bottom: 35px;
+    background-color: white;
+    text-align: left;
+    color: rgb(107, 105, 105);
+}
+
+.blogs .container .our .blog img {
+    width: 100%;
+}
+
+.blogs .container .our .blog .img a iframe {
+    width: 100%;
+    height: 199px;
+}
+
+.blogs .container h1 {
+    font-size: 36px;
+    padding-bottom: 20px;
+    position: relative;
+    color: rgb(36, 33, 33);
+}
+
+.blogs .container h1::after {
+    content: "";
+    background-color: var(--minecolor);
+    bottom: 5px;
+    height: 1px;
+    width: 160px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+.blogs .container h1::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    bottom: 0px;
+    width: 70px;
+    border-color: var(--minecolor);
+    border-style: solid;
+    border-width: 1px 0px;
+    padding: 4px 0px 5px;
+}
+
+.blogs .container .our .blog p,
+h2,
+.a {
+    padding: 10px 0 0 15px;
+    line-height: 27px;
+}
+
+.blogs .container .our .blog a {
+    color: rgb(49, 48, 48);
+}
+
+.blogs .container .our .blog a:hover {
+    color: var(--minecolor);
+}
+
+.Contact .container {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.Contact .container h1 {
+    font-size: 36px;
+    padding-bottom: 20px;
+    position: relative;
+    color: rgb(36, 33, 33);
+}
+
+.Contact .container h1::after {
+    content: "";
+    background-color: var(--minecolor);
+    bottom: 5px;
+    height: 1px;
+    width: 160px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+.Contact .container h1::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    bottom: 0px;
+    width: 70px;
+    border-color: var(--minecolor);
+    border-style: solid;
+    border-width: 1px 0px;
+    padding: 4px 0px 5px;
+}
+
+.Contact .container .form {
+    text-align: left;
+    padding: 60px 200px;
+}
+
+.Contact .container .form input,
+textarea {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 8px 10px;
+    width: 100%;
+}
+
+.Contact .container .form .input {
+    width: 49.7%;
+}
+
+.Contact .container .form input:hover {
+    border-color: var(--minecolor);
+}
+
+.Contact .container .form textarea {
+    height: 100px;
+}
+
+.Contact .container .form textarea:hover {
+    border-color: var(--minecolor);
+}
+
+.Contact .container .form button {
+    background-color: var(--minecolor);
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    cursor: not-allowed;
+}
+
+.Contact .container .form button:hover {
+    background-color: red;
+}
+
+.Copy {
+    text-align: center;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding: 50px 0;
+}
+
+.Copy .container i {
+    padding: 20px 10px;
+    font-size: larger;
+}
+
+.Copy .container i:hover {
+    color: var(--minecolor);
+}
+
+.Copy .container p a {
+    color: var(--minecolor);
+}
+
+.Copy .container p a:hover {
+    border-bottom: solid 0.5px var(--minecolor);
+}
